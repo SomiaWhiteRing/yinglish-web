@@ -17,7 +17,7 @@
           :max=1
           :step='0.01'
           :format-tooltip="formatTooltip"
-          style="float: left;width: 70%;margin: 0 20px">
+          style="float: left;width: 70%">
         </el-slider>
         <el-button @click="YouCanSeSe" style="float: right;">翻译</el-button>
       </el-col>
