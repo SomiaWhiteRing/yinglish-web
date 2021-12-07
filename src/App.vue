@@ -1,23 +1,35 @@
 <template>
-  <div id="app">
-    <div>
-      <el-input
-        type="textarea"
-        placeholder="请输入内容"
-        v-model="chinese">
-      </el-input>
-      <el-slider
-        v-model="seSeLevel"
-        :max=1
-        :step='0.01'>
-      </el-slider>
-      <el-button @click="YouCanSeSe">Start</el-button>
-      <el-input
-        type="textarea"
-        v-model="yinglish"
-        readonly="true">
-      </el-input>
-    </div>
+  <div id="app" style="max-width:800px;margin:0 auto">
+    <el-row>
+      <el-col style="font-weight:400;font-size:28px;text-align:center;margin-bottom:10px">
+        淫语翻译机
+      </el-col>
+      <el-col>
+        <el-input
+          type="textarea"
+          placeholder="这里可以输入正经的内容"
+          v-model="chinese">
+        </el-input>
+      </el-col>
+      <el-col style="padding:10px 0">
+        <el-slider
+          v-model="seSeLevel"
+          :max=1
+          :step='0.01'
+          :format-tooltip="formatTooltip"
+          style="float: left;width: 70%;margin: 0 20px">
+        </el-slider>
+        <el-button @click="YouCanSeSe" style="float: right;">翻译</el-button>
+      </el-col>
+      <el-col>
+        <el-input
+          type="textarea"
+          v-model="yinglish"
+          placeholder="这里会翻译出来色色的内容"
+          readonly="true">
+        </el-input>
+      </el-col>
+    </el-row>
   </div>
 </template>
 
@@ -57,14 +69,10 @@ export default {
         return b
       }
       return i
+    },
+    formatTooltip(val) {
+      return `淫乱度：${val}`
     }
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: Helvetica, sans-serif;
-  text-align: center;
-}
-</style>
