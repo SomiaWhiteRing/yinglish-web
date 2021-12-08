@@ -6,7 +6,7 @@
 
 ```bash
 # 克隆项目
-git clone -b dev_jk https://github.com/SomiaWhiteRing/yinglish-web.git
+git clone -b node https://github.com/SomiaWhiteRing/yinglish-web.git
 
 # 进入项目目录
 cd yinglish-web
