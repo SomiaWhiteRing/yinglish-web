@@ -1,10 +1,10 @@
 # 淫语翻译机！
 
-简明易懂的[淫语翻译机！](https://github.com/RimoChan/yinglish)的web版，感谢[RimoChan](https://github.com/RimoChan)提供的奇妙创意。
+简明易懂的[淫语翻译机！](https://github.com/RimoChan/yinglish)的web版，感谢[RimoChan](https://github.com/RimoChan)提供的奇妙创意与[altriayu](https://github.com/altriayu)提供的node端灵感。
 
-在线体验：[Github Page](https://yinglish-web-ma128lrtq-somiawhitering.vercel.app/)
+在线体验：[VercelApp](https://yinglish-web.vercel.app/)
 
-(因为[jieba-js](https://github.com/pulipulichen/jieba-js)没有词性分析功能做出来的效果一般都很怪，还是建议玩python版<s>或者有哪个好心人送我一台服务器也行</s>)
+如果无法连接到Vercel或者接口罢工了，可以尝试使用[本地版](https://github.com/SomiaWhiteRing/yinglish-web/tree/local-version)
 
 ## 开发
 
@@ -22,6 +22,6 @@ npm install
 npm run dev
 ```
 
-浏览器访问 http://127.0.0.1:8010
+浏览器访问 http://127.0.0.1:801
 
-<sub>有没有人救一下这座三分钟热度砌出来的临时屎山 我不管了（逃）</sub>
+后端服务参见[node分支](https://github.com/SomiaWhiteRing/yinglish-web/tree/node)
