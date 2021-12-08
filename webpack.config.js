@@ -59,7 +59,7 @@ module.exports = (options = {}) => ({
     port: 8010,
     proxy: {
       '/api/': {
-        target: 'https://demo-vercel-q6f3w2rnf-somiawhitering.vercel.app',
+        target: 'https://yinglish-web-back-somiawhitering.vercel.app/',
         changeOrigin: true,
         pathRewrite: {
           '^/api': ''

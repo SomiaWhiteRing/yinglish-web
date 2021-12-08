@@ -54,10 +54,9 @@ export default {
   methods: {
     YouCanSeSe(){
       let seSe = ''
-      let yinglish = ''
       let level = this.seSeLevel
       this.$http({
-        url: 'https://demo-vercel-q6f3w2rnf-somiawhitering.vercel.app/api/translate',
+        url: 'https://yinglish-web-back-somiawhitering.vercel.app/api/translate',
         method: "get",
         crossdomain: true,
         params: {
@@ -65,16 +64,15 @@ export default {
           level: level
         }
       }).then(res => {
-        yinglish = response.data.msg
+        this.yinglish = res.data.msg
       }).catch(() => {
         call_jieba_cut(this.chinese, function (a) {
           seSe = a
         });
         for(let i of seSe){
-          yinglish += this.chs2yin(i,level)
+          this.yinglish += this.chs2yin(i,level)
         }
       })
-      this.yinglish = yinglish
     },
     chs2yin(i,level){
       if(Math.random() > level) return i
