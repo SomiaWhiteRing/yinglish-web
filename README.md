@@ -1,10 +1,10 @@
 # 淫语翻译机！
 
-简明易懂的[淫语翻译机！](https://github.com/RimoChan/yinglish)的web版，感谢[RimoChan](https://github.com/RimoChan)提供的奇妙创意。
+简明易懂的[淫语翻译机！](https://github.com/RimoChan/yinglish)的web本地版，感谢[RimoChan](https://github.com/RimoChan)提供的奇妙创意。
 
-在线体验：[Github Page](https://yinglish-web-ma128lrtq-somiawhitering.vercel.app/)
+在线体验：[VercelApp](https://yinglish-web-local.vercel.app/)
 
-(因为[jieba-js](https://github.com/pulipulichen/jieba-js)没有词性分析功能做出来的效果一般都很怪，还是建议玩python版<s>或者有哪个好心人送我一台服务器也行</s>)
+(本地版的语言分析基于[jieba-js](https://github.com/pulipulichen/jieba-js),需要一定的加载等待,并且由于没有词性分析功能翻译效果较差,不推荐使用)
 
 ## 开发
 
