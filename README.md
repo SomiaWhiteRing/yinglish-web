@@ -22,6 +22,6 @@ npm install
 npm run dev
 ```
 
-浏览器访问 http://127.0.0.1:801
+浏览器访问 http://127.0.0.1:8010
 
 后端服务参见[node分支](https://github.com/SomiaWhiteRing/yinglish-web/tree/node)
