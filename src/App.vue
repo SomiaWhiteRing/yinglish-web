@@ -25,7 +25,10 @@
           :format-tooltip="formatTooltip"
           style="float: left;width: 70%">
         </el-slider>
-        <el-button @click="YouCanSeSe" style="float: right;">翻译</el-button>
+        <el-button
+        @click="YouCanSeSe"
+        style="float: right;"
+        :loading="loading">翻译</el-button>
       </el-col>
       <el-col>
         <el-input
@@ -48,12 +51,14 @@ export default {
     return {
       chinese: undefined,
       yinglish: undefined,
-      seSeLevel: 0.5
+      seSeLevel: 0.5,
+      loading: false
     }
   },
   methods: {
     YouCanSeSe(){
       let level = this.seSeLevel
+      this.loading = true
       this.$http({
         url: 'https://yinglish-web-back-somiawhitering.vercel.app/api/translate',
         method: "get",
@@ -64,7 +69,14 @@ export default {
         }
       }).then(res => {
         this.yinglish = res.data.msg
-      }).catch(() => {})
+        this.loading = false
+      }).catch(() => {
+        this.$notify.error({
+          title: '请求接口失败',
+          message: '请稍后再试'
+        });
+        this.loading = false
+      })
     },
     formatTooltip(val) {
       return `淫乱度：${val}`
