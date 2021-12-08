@@ -53,7 +53,6 @@ export default {
   },
   methods: {
     YouCanSeSe(){
-      let seSe = ''
       let level = this.seSeLevel
       this.$http({
         url: 'https://yinglish-web-back-somiawhitering.vercel.app/api/translate',
@@ -65,25 +64,7 @@ export default {
         }
       }).then(res => {
         this.yinglish = res.data.msg
-      }).catch(() => {
-        call_jieba_cut(this.chinese, function (a) {
-          seSe = a
-        });
-        for(let i of seSe){
-          this.yinglish += this.chs2yin(i,level)
-        }
-      })
-    },
-    chs2yin(i,level){
-      if(Math.random() > level) return i
-      if(i === '，' || i === '。') return '……'
-      if(i === '!' || i === '！') return '❤'
-      if(i.length > 1 && Math.random() < 0.5){
-          return (i[0] + '……' + i)
-      }else if(Math.random() < 0.5){
-        return '……' + i.split("").map(item => '〇').join('')
-      }
-      return i
+      }).catch(() => {})
     },
     formatTooltip(val) {
       return `淫乱度：${val}`
